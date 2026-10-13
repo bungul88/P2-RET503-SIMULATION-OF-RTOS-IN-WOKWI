@@ -48,6 +48,7 @@ TaskHandle_t sensor_start(QueueHandle_t queue) {
   pinMode(PIN_LED_SENSOR, OUTPUT);
 #if USE_POTENTIOMETER
   pinMode(PIN_POT, INPUT);
+  analogReadResolution(12);   // <-- BARIS BARU: paksa ADC 12-bit (0..4095)
 #endif
   TaskHandle_t h = nullptr;
   xTaskCreate(sensorTask, "Sensor", STACK_DEFAULT, nullptr, PRIO_SENSOR, &h);
