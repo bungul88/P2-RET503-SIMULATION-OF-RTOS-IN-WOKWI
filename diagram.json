@@ -8,7 +8,7 @@
       "id": "esp",
       "top": 0,
       "left": 0,
-      "attrs": { "builder": "esp-idf" }
+      "attrs": {}
     },
     {
       "type": "wokwi-led",
